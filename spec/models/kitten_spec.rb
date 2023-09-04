@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Kitten do
+RSpec.describe Kitten, type: :model do
     subject{described_class.new(name: 'Tommy', age: 2, cuteness: 10, softness: 9)
     }
     describe 'validation' do 
