@@ -10,7 +10,6 @@ RSpec.describe 'Kitten resquests' do
   describe 'Get /kittens' do
     it 'responds with 200' do
      get('/kittens')
-     json = JSON.parse(response.body)
      expect(response.status).to eql(200)
     end
 
