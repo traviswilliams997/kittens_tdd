@@ -14,7 +14,7 @@ RSpec.describe 'Kitten resquests' do
     end
 
     it 'contains all kittens' do
-        get('/kittens')
+        get kittens_path
         json = JSON.parse(response.body) 
         expect(json['kittens']).to contain_exactly('Tommy', 'Jerry')
     end 
