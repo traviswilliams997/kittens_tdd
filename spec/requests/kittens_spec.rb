@@ -6,10 +6,10 @@ RSpec.describe KittensController, type: :controller do
         Kitten.create(name: 'Jerry', age: 1, cuteness: 9, softness: 10)
     end
 
-  describe 'Get Index' do
+  describe 'GET kittens#index' do
     it 'responds with 200' do
      get('index')
-     expect(response.status).to eql(200)
+     expect(response).to have_http_status(200)
     end
 
     it 'contains names of all kittens' do
