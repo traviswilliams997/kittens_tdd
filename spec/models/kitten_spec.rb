@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Kitten do
-    subject{described_class.new(name: 'Tommy')
+    subject{described_class.new(name: 'Tommy', age: 2, cuteness: 10, softness: 9)
     }
     describe 'validation' do 
         describe 'name' do
@@ -12,4 +12,10 @@ RSpec.describe Kitten do
             end 
         end 
     end 
+
+    describe '#cat_info' do 
+        it 'returns the cat information' do 
+          expect(subject.cat_info).to eql('Tommy is 2 years old, has cuteness 10 and softness 9')
+        end
+    end
 end
